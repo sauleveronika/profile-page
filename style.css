@@ -1,0 +1,268 @@
+/*
+1. @media (max-width: 1200px)
+2. height of welcome section, always == to the height of viewpoint
+*/
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&family=PT+Sans+Narrow&display=swap');
+
+body{
+  font-family: 'PT Sans', sans-serif;
+ }
+
+/************ NAV BAR STYLE ************************/
+#navbar{
+  top: 0;
+  right: 0;
+  left: 0;  
+  position: fixed;
+  background-color: #3F2556;
+  z-index: 300;
+  font-size: 1.28em;
+  text-align: right;
+}
+#navbar li{
+  list-style-type: none;  
+  display: inline;
+  padding: 0.2em 2em 0.2em 2em;
+}
+#navbar a{
+  text-decoration: none;  
+  font-family: inherit; 
+  color: #D8D8F6;
+}
+#navbar a:hover{
+  text-decoration: underline;
+  color: #EEEEFB;
+}
+/****************************************************/
+/****************************************************/
+
+main{
+  position: absolute; 
+  left: 0;
+  right: 0;
+}
+
+/****************** WELCOME SECTION STYLE *******************/
+#welcome-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ /* or use text-align: center;*/
+  /*background: radial-gradient(circle, rgba(255,218,95,0.9864146342130602) 4%, rgba(255,150,113,1) 72%, rgba(255,111,145,1) 100%);*/
+  /*background: radial-gradient(circle, rgba(255,218,95,0.9864146342130602) 4%, rgba(255,150,113,1) 70%);*/
+  background-color: #D8D8F6;
+  height: 100vh;
+  animation: background 1.5s;  
+}
+#welcome-section h1{
+  font-size: 5em;
+  color: white;
+  text-align: center;
+}
+#welcome-section p{
+  font-size: 2em;
+  animation: fade_in_dev 2s;
+  color: #3F2556;
+  font-style: italic;
+  margin-top: -1em;
+}
+/****************************************************/
+/****************************************************/
+
+/****************** PROJECTS SECTION STYLE ******************/
+#projects{
+  display: flex;
+  flex-direction: column;
+  background-color: #474973;
+  padding: 6em 0em 12em 0em;
+  
+}
+
+#projects h2{
+  color: white;
+  text-align: center;
+  font-size: 2.5em;
+  margin: auto;
+  margin-top: 1em;
+  margin-bottom: 2em;
+  border-style: solid none solid none;
+  border-color: white;
+  padding: 0.7em;
+}
+
+/******grid view option ******* with blocks:
+#projects{  display: block;}
+.project-tile{  display: inline-block;  padding: 2em;  text-align: center;} */
+
+
+/******** Flex option:********/
+#tiles{
+  display: flex; 
+  flex-flow: row wrap;
+  width: 100%;
+  gap: 2em;  
+  justify-content: center;
+}
+.project-tile{
+  display: flex;
+  flex-flow: column;
+  justify-items: center;
+}
+.im {
+  background-color: white;  
+  width: 25em;
+  height: 25em;
+}
+#projects p{
+  width: 100%;
+  padding: 1em 0em 1em 0em;
+  margin: 0;
+  text-align: center;
+  color: #D8D8F6;
+  background-color: #3F2556;
+  font-size: 1.25em;  
+}
+
+#projects p:hover{
+  color: white;
+  text-decoration: underline;  
+}
+
+#see_all{
+  display: block;
+  text-align: center;
+  margin: auto;
+  margin-top: 3.5em;
+  width: 7em;
+  padding: 1em;
+  background-color: #3F2556;
+  color: #D8D8F6;
+  font-size: 1.3em;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+#see_all:hover{
+  color: #3F2556;
+  background-color: #D5C6E0;
+}
+/********************************************************/
+/******************************************************/
+
+/**************** CONTACT SECTION STYLE *******************/
+#contact{
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  background-color: #161B33;
+  height: 90vh;
+}
+
+#contact h2{
+  font-size: 4.5em;
+  color: white; 
+}
+
+#contact p{
+  color: #3F2556;
+  font-size: 1.3em;
+  color: white;
+  font-style: italic;
+  margin-top: -2em;
+  font-weight: 100;
+}
+#contact ul{
+  display: flex; 
+  flex-flow: row wrap;
+  justify-items: center;
+  padding-left: 0px;
+}
+#contact li{
+  list-style-type: none;  
+  display: inline;    
+}
+#contact a{
+  text-decoration: none;
+  color: #8183B1;
+  font-size: 1.5em;
+  padding-right: 1em;
+  padding-left: 1em;
+}
+#contact a:hover{
+  color: white;
+}
+
+
+/********************************************************/
+/******************************************************/
+
+
+@keyframes fade_in_dev {
+  0% {color:white;}
+  70% {color:  #D8D8F6;} 
+
+}
+@keyframes background{
+  0%{background-color:white}
+  100%{background-color: #D8D8F6}
+} 
+
+/********************************************************/
+/******************************************************/
+@media (max-width: 870px) {
+  #navbar li{
+    padding: 0.2em 1.2em 0.2em 1.2em;
+  }
+  #navbar a:hover{
+    text-decoration: none;
+    color: white;
+  }
+  .im{
+    width: 21em;
+    height: 21em;
+  }    
+  #contact ul{
+    display: flex; 
+    flex-flow: column wrap;
+    padding-left: 0px;
+  }  
+  #contact li{
+    font-size: 1.15em;
+  }
+}
+
+@media (max-width: 470px) {
+  #navbar li{
+    padding: 0em 1em 0em 1em;
+    /*border-width: 1px 0px 1px 0px;
+    border-color: white;
+    border-style: solid;
+    font-size: 1.25em;*/
+  }  
+  #navbar ul{
+    text-align: center;
+  }
+  #welcome-section h1{
+    font-size: 3.1Sem;
+  }
+  #welcome-section p{
+    font-size: 1.5em;
+  }
+  #projects{
+    padding-top: 3em;
+  }
+  #projects h2{
+    font-size: 1.60em;
+    padding: 0.3em 0.1em 0.3em 0.1em;    
+  }
+  #contact h2{
+    text-align: center;
+    font-size: 2.2em;
+    padding-bottom: 0.5em;
+  }
+}
+
+
