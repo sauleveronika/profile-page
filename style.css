@@ -1,14 +1,8 @@
-/*
-1. @media (max-width: 1200px)
-2. height of welcome section, always == to the height of viewpoint
-*/
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans&family=PT+Sans+Narrow&display=swap');
 
 body{
   font-family: 'PT Sans', sans-serif;
  }
-
-/************ NAV BAR STYLE ************************/
 #navbar{
   top: 0;
   right: 0;
@@ -33,16 +27,11 @@ body{
   text-decoration: underline;
   color: #EEEEFB;
 }
-/****************************************************/
-/****************************************************/
-
 main{
   position: absolute; 
   left: 0;
   right: 0;
 }
-
-/****************** WELCOME SECTION STYLE *******************/
 #welcome-section{
   display: flex;
   flex-direction: column;
@@ -67,18 +56,12 @@ main{
   font-style: italic;
   margin-top: -1em;
 }
-/****************************************************/
-/****************************************************/
-
-/****************** PROJECTS SECTION STYLE ******************/
 #projects{
   display: flex;
   flex-direction: column;
   background-color: #474973;
-  padding: 6em 0em 12em 0em;
-  
+  padding: 6em 0em 12em 0em;  
 }
-
 #projects h2{
   color: white;
   text-align: center;
@@ -90,13 +73,6 @@ main{
   border-color: white;
   padding: 0.7em;
 }
-
-/******grid view option ******* with blocks:
-#projects{  display: block;}
-.project-tile{  display: inline-block;  padding: 2em;  text-align: center;} */
-
-
-/******** Flex option:********/
 #tiles{
   display: flex; 
   flex-flow: row wrap;
@@ -123,12 +99,10 @@ main{
   background-color: #3F2556;
   font-size: 1.25em;  
 }
-
 #projects p:hover{
   color: white;
   text-decoration: underline;  
 }
-
 #see_all{
   display: block;
   text-align: center;
@@ -143,15 +117,10 @@ main{
   font-weight: 700;
   letter-spacing: 0.1em;
 }
-
 #see_all:hover{
   color: #3F2556;
   background-color: #D5C6E0;
 }
-/********************************************************/
-/******************************************************/
-
-/**************** CONTACT SECTION STYLE *******************/
 #contact{
   display: flex;
   flex-flow: column wrap;
@@ -160,12 +129,10 @@ main{
   background-color: #161B33;
   height: 90vh;
 }
-
 #contact h2{
   font-size: 4.5em;
   color: white; 
 }
-
 #contact p{
   color: #3F2556;
   font-size: 1.3em;
@@ -194,24 +161,14 @@ main{
 #contact a:hover{
   color: white;
 }
-
-
-/********************************************************/
-/******************************************************/
-
-
 @keyframes fade_in_dev {
   0% {color:white;}
   70% {color:  #D8D8F6;} 
-
 }
 @keyframes background{
   0%{background-color:white}
   100%{background-color: #D8D8F6}
 } 
-
-/********************************************************/
-/******************************************************/
 @media (max-width: 870px) {
   #navbar li{
     padding: 0.2em 1.2em 0.2em 1.2em;
@@ -233,7 +190,6 @@ main{
     font-size: 1.15em;
   }
 }
-
 @media (max-width: 470px) {
   #navbar li{
     padding: 0em 1em 0em 1em;
@@ -264,5 +220,3 @@ main{
     padding-bottom: 0.5em;
   }
 }
-
-
