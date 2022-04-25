@@ -85,6 +85,9 @@ main{
   flex-flow: column;
   justify-items: center;
 }
+.project-tile:hover{
+  transform: scale(1.1);
+}
 .im {
   background-color: white;  
   width: 25em;
